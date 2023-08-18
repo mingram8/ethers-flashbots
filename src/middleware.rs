@@ -159,7 +159,7 @@ impl<M: Middleware, S: Signer> FlashbotsMiddleware<M, S> {
         &self,
         bundle: &BundleRequest,
     ) -> Result<SimulatedBundle, FlashbotsMiddlewareError<M, S>> {
-        println!("result {:?}", Result.Ok);
+        println!("result {:?}", Result.Ok());
         bundle
             .block()
             .and(bundle.simulation_block())
