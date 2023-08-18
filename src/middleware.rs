@@ -123,13 +123,13 @@ impl<M: Middleware, S: Signer> FlashbotsMiddleware<M, S> {
     /// Initialize a new Flashbots middleware.
     ///
     /// The signer is used to sign requests to the relay.
-    pub fn new(inner: M, relay_url: impl Into<Url>, relay_signer: S) -> Self {
-        Self {
-            inner,
-            relay: Relay::new(relay_url, Some(relay_signer)),
-            simulation_relay: None,
-        }
-    }
+    // pub fn new(inner: M, relay_url: impl Into<Url>, relay_signer: S) -> Self {
+    //     Self {
+    //         inner,
+    //         relay: Relay::new(relay_url, Some(relay_signer)),
+    //         simulation_relay: None,
+    //     }
+    // }
 
     /// Get the relay client used by the middleware.
     pub fn relay(&self) -> &Relay<S> {
