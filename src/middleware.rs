@@ -164,7 +164,7 @@ impl<M: Middleware, S: Signer> FlashbotsMiddleware<M, S> {
             .and(bundle.simulation_block())
             .and(bundle.simulation_timestamp())
             .ok_or(FlashbotsMiddlewareError::MissingParameters)?;
-        println!("{:?}", bundle);
+        // println!("{:?}", bundle);
         self.simulation_relay
             .as_ref()
             .unwrap_or(&self.relay)
