@@ -51,7 +51,7 @@ pub struct BundleRequest {
     #[serde(rename = "txs")]
     #[serde(serialize_with = "serialize_txs")]
     transactions: Vec<BundleTransaction>,
-    #[serde(rename = "revertingTxHashes")]
+    #[serde(rename = "reverting_hashes")]
     #[serde(skip_serializing_if = "Vec::is_empty")]
     revertible_transaction_hashes: Vec<H256>,
 
