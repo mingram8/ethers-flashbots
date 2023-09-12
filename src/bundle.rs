@@ -53,7 +53,7 @@ pub struct BundleRequest {
     transactions: Vec<BundleTransaction>,
     #[serde(rename = "reverting_hashes")]
     #[serde(skip_serializing_if = "Vec::is_empty")]
-    revertible_transaction_hashes: Vec<H256>,
+    reverting_hashes: Vec<H256>,
 
     #[serde(rename = "blockNumber")]
     #[serde(skip_serializing_if = "Option::is_none")]
