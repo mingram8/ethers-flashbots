@@ -131,7 +131,7 @@ impl BundleRequest {
             BundleTransaction::Signed(inner) => inner.hash(),
             BundleTransaction::Raw(inner) => keccak256(inner).into(),
         };
-        self.revertible_transaction_hashes.push(tx_hash);
+        self.reverting_hashes.push(tx_hash);
 
         self
     }
@@ -151,7 +151,7 @@ impl BundleRequest {
             BundleTransaction::Signed(inner) => inner.hash(),
             BundleTransaction::Raw(inner) => keccak256(inner).into(),
         };
-        self.revertible_transaction_hashes.push(tx_hash);
+        self.reverting_hashes.push(tx_hash);
     }
 
     /// Get a reference to the transactions currently in the bundle request.
